@@ -1,5 +1,5 @@
 {
-  "short_name": "React App",
+  "short_name": "Cra PWA",
   "name": "Create React App Sample",
   "icons": [
     {
@@ -18,8 +18,34 @@
       "sizes": "512x512"
     }
   ],
+  "shortcuts": [
+    {
+      "name": "Case Studies",
+      "short_name": "Case Studies",
+      "url": "/case-studies",
+      "icons": [
+        {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Company",
+      "short_name": "Company",
+      "url": "/company",
+      "icons": [
+        {
+          "src": "/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#fff",
   "background_color": "#ffffff"
 }

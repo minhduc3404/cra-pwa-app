@@ -16,13 +16,17 @@ export const ShareButton = () => {
     setShareSupport(true)
   }
 
-  function share(text) {
+  async function share(text) {
     if (navigator.share === undefined) {
       handlerError("No support navigator share");
       return;
     }
-
-    handlerSupportFunc();
+    setShareSupport(true)
+    try{
+        await navigator.share({text})
+    }catch(error){
+        handlerError(error)
+    }
   }
 
   return (

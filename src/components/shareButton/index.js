@@ -5,20 +5,26 @@ import { StyledButton } from "./styles";
 export const ShareButton = () => {
   const notify = (text) => toast(text);
 
-  function handlerUnsupport(text) {
-    notify(text);
+  function handlerError(error) {
+    notify(error);
+  }
+
+  function handlerSupportFunc() {
+    toast({content: 'Hỗ trợ chức năng share'})
   }
 
   function share(text) {
-    
     if (navigator.share === undefined) {
-      handlerUnsupport(text);
+      handlerError("No support navigator share");
       return;
     }
 
-    console.log("has support navigator share")
+    handlerSupportFunc();
   }
 
-
-  return <StyledButton onClick={() => share('No support navigator share')}>Share URL</StyledButton>;
+  return (
+    <StyledButton onClick={() => share("I want to share this text")}>
+      Share URL
+    </StyledButton>
+  );
 };

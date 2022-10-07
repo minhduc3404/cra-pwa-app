@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
 import logo from './logo.svg';
-import icon from './assets/icons/el_map-marker.png'
 import './App.css';
+import { ShareButton } from './components/shareButton';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
@@ -26,7 +28,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <img src={icon} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -38,7 +39,13 @@ function App() {
         >
           Learn React ass
         </a>
+
+        <ShareButton />
+
+        <ToastContainer />
       </header>
+
+      
     </div>
   );
 }

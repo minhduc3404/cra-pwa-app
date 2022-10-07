@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import logo from './logo.svg';
+import icon from './assets/icons/el_map-marker.png'
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <img src={icon} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>

@@ -1,19 +1,19 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function useStreamMedia(requestedMedia) {
   const [mediaStream, setMediaStream] = useState(null);
 
-  const enableStream = useCallback(async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia(requestedMedia);
-      setMediaStream(stream);
-    } catch (error) {
-      // Removed
-      console.error("useStreamMedia", error);
-    }
-  }, [requestedMedia]);
-
   useEffect(() => {
+    const enableStream = async ()=> {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia(requestedMedia);
+        setMediaStream(stream);
+        console.log("useStreamMedia", stream);
+      } catch (error) {
+        console.error("useStreamMedia", error);
+      }
+    }
+
     if (!mediaStream) {
       enableStream();
     } else {
@@ -24,4 +24,6 @@ export function useStreamMedia(requestedMedia) {
       };
     }
   }, [mediaStream, requestedMedia]);
+
+  return mediaStream
 }

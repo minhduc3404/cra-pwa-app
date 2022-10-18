@@ -4,7 +4,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import { ShareButton } from "./components/shareButton";
 import { ToastContainer } from "react-toastify";
-import Camera from "./views/camera";
+// import Camera from "./views/camera";
+import MediaRecorder from "./pages/mediaRecorder";
+import MediaRecorderCapture from "./pages/mediaRecorder";
 
 function App() {
   // useEffect(() => {
@@ -24,6 +26,8 @@ function App() {
   //     .catch((error) => console.log('Error sharing', error));
   // }, [])
 
+  new Blob()
+
   return (
     <div className="App">
       <header className="App-header">
@@ -32,7 +36,8 @@ function App() {
 
         <ToastContainer />
 
-        <Camera />
+        {/* <Camera /> */}
+        <MediaRecorderCapture />
       </header>
     </div>
   );

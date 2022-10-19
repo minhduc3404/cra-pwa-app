@@ -26,19 +26,15 @@ function App() {
   //     .catch((error) => console.log('Error sharing', error));
   // }, [])
 
-  new Blob()
+  new Blob();
 
   return (
     <div className="App">
-      <header className="App-header">
-
+      {/* <div className="Component">
         <ShareButton />
-
         <ToastContainer />
-
-        {/* <Camera /> */}
-        <MediaRecorderCapture />
-      </header>
+      </div> */}
+      <MediaRecorderCapture />
     </div>
   );
 }

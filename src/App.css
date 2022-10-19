@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  background-color: #220000;
+  min-height: 100vh;
+  display: block;
+  override: auto;
+}
+
+.Component{
+  z-index: 1;
 }
 
 .App-logo {
